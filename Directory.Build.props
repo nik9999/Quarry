@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup>
+    <!-- Базовые параметры компиляции .NET -->
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <!-- CA1848/CA1873: рекомендации структурированного логгирования и ленивых делегатов -->
+    <NoWarn>$(NoWarn);CA1848;CA1873</NoWarn>
+
+    <!-- Детерминированная сборка -->
+    <Deterministic>true</Deterministic>
+
+    <!-- Метаданные сборки -->
+    <Authors>Quarry Team</Authors>
+    <Company>Quarry</Company>
+    <Product>Quarry: Autonomous Enterprise RAG</Product>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) Quarry</Copyright>
+    <Version>0.1.0</Version>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>

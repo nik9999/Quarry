@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Quarry.Core\Quarry.Core.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Ingestion\Quarry.Ingestion.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Retrieval\Quarry.Retrieval.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Reranking\Quarry.Reranking.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Reranking.Onnx\Quarry.Reranking.Onnx.csproj" />
+  </ItemGroup>
+
+</Project>

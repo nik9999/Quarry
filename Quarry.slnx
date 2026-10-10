@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/Quarry.Playground/Quarry.Playground.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Quarry.Core/Quarry.Core.csproj" />
+    <Project Path="src/Quarry.Ingestion/Quarry.Ingestion.csproj" />
+    <Project Path="src/Quarry.Retrieval/Quarry.Retrieval.csproj" />
+    <Project Path="src/Quarry.Reranking/Quarry.Reranking.csproj" />
+    <Project Path="src/Quarry.Reranking.Onnx/Quarry.Reranking.Onnx.csproj" />
+    <Project Path="src/Quarry.GigaChat/Quarry.GigaChat.csproj" />
+    <Project Path="src/Quarry.Operations/Quarry.Operations.csproj" />
+    <Project Path="src/Quarry.Evaluation/Quarry.Evaluation.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Quarry.UnitTests/Quarry.UnitTests.csproj" />
+    <Project Path="tests/Quarry.IntegrationTests/Quarry.IntegrationTests.csproj" />
+    <Project Path="tests/Quarry.EvalTests/Quarry.EvalTests.csproj" />
+    <Project Path="tests/Quarry.SecurityTests/Quarry.SecurityTests.csproj" />
+  </Folder>
+</Solution>

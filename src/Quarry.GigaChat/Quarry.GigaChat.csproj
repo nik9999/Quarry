@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Sber GigaChat LLM and Embeddings client integration for Quarry: IGigaChatClient, IChatClient, IEmbeddingGenerator, streaming, function calling, and Microsoft Agent Framework agent support.</Description>
+    <PackageTags>rag;gigachat;sber;ai;llm;chatclient;embeddings;agent-framework;dotnet</PackageTags>
+    <!-- CA1720: API DTO models contain 'Object' property matching GigaChat JSON schema 'object' field -->
+    <NoWarn>$(NoWarn);CA1720</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+</Project>

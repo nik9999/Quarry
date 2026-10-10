@@ -1,0 +1,24 @@
+<Project>
+  <!-- 
+    Directory.Build.targets импортируется в самом конце процесса оценки MSBuild каждого проекта,
+    после того как все свойства и элементы самого проекта уже вычислены.
+  -->
+
+  <!-- Автоматическое подключение вспомогательных зависимостей для тестовых проектов -->
+  <ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests')) or $(MSBuildProjectName.EndsWith('Test'))">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="coverlet.collector" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Tests')) or $(MSBuildProjectName.EndsWith('Test'))">
+    <!-- CA1707: разрешение подчеркиваний в тестах; CA1822: разрешение нестатических методов в тестовых хелперах -->
+    <NoWarn>$(NoWarn);CA1707;CA1822</NoWarn>
+  </PropertyGroup>
+
+  <!-- Информационное сообщение о сборке при высокой детализации -->
+  <Target Name="QuarryProjectInfo" BeforeTargets="BeforeBuild">
+    <Message Importance="low" Text="[Quarry Build] Сборка проекта $(MSBuildProjectName) под целевую платформу $(TargetFramework)..." />
+  </Target>
+</Project>

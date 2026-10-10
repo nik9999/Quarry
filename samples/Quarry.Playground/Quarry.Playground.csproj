@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Quarry.Ingestion\Quarry.Ingestion.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Retrieval\Quarry.Retrieval.csproj" />
+    <ProjectReference Include="..\..\src\Quarry.Core\Quarry.Core.csproj" />
+  </ItemGroup>
+
+</Project>
